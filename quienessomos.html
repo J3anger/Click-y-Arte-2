@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/quiemesomos.css">
+  <link rel="stylesheet" href="css/header&fooder.css">
+  <title>Click y Arte</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="container-fluid border-bottom header header-fullwidth">
+    <!-- AVISO CONTACTO -->
+    <div class="aviso-contacto text-center py-1">
+      <a href="https://wa.me/51939251011" target="_blank" class="mensaje-contacto text-decoration-none text-dark">
+        <strong>¿Quisieras contactar con nosotros? Escríbenos por Whatsapp al +51
+          939 251 011.</strong>
+      </a>
+    </div>
+
+    <div class="contenido-header">
+      <!-- DESKTOP: Logo, Título y Botones -->
+      <div class="row align-items-center justify-content-between gx-0 d-none d-md-flex">
+        <div class="col-md-2 d-flex justify-content-start align-items-center">
+          <img src="img_header/logo.jpg" alt="Logo Click y Arte" class="header-logo" />
+        </div>
+        <div class="col-md-4 d-flex justify-content-center">
+          <a href="index.html" class="header-title">Click y Arte</a>
+        </div>
+        <div class="col-md-3 d-flex justify-content-end align-items-center acciones pe-3">
+          <a href="#" class="btn btn-registrarse">Registrarse</a>
+          <a href="#" class="btn btn-iniciar">Iniciar sesión</a>
+        </div>
+      </div>
+
+      <!-- MOBILE: Logo centrado -->
+      <div class="row d-flex d-md-none justify-content-center pt-3 pb-2">
+        <div class="col-12 d-flex justify-content-center align-items-center">
+          <img src="img_header/logo.jpg" alt="Logo Click y Arte" class="header-logo logo-mobile" />
+        </div>
+      </div>
+
+      <!-- MOBILE: Lupa, Carrito y Menú hamburguesa -->
+      <div class="row d-flex d-md-none justify-content-between align-items-center px-3 pb-2">
+        <div class="col-auto d-flex align-items-center gap-3">
+          <img src="img_header/buscar.png" alt="Buscar" class="icono" id="icono-buscar" />
+          <a href="carrito.html" class="position-relative">
+            <img src="img_header/carrito_compra.png" alt="Carrito" class="carrito-img" />
+            <span id="contador-carrito" class="badge position-absolute">0</span>
+          </a>
+          <input type="text" id="input-busqueda" class="input-busqueda" placeholder="Buscar..." />
+        </div>
+        <div class="col-auto">
+          <button class="boton-hamburguesa">☰</button>
+        </div>
+      </div>
+
+      <!-- NAV DESKTOP -->
+      <div class="row mt-3 justify-content-center align-items-center gx-0 nav-contenido d-none d-md-flex">
+        <div class="col-auto">
+          <img src="img_header/buscar.png" alt="Buscar" class="icono" />
+        </div>
+        <div class="col-auto d-flex flex-wrap justify-content-center gap-3 nav-links">
+          <a href="index.html">Inicio</a>
+          <a href="Productos.html">Hot sale</a>
+          <a href="tienda.html">Tienda</a>
+          <a href="paginaPrincipal.html">Tendencia</a>
+          <a href="quienessomos.html">Quiénes somos</a>
+          <a href="contacto.html">Contáctanos</a>
+        </div>
+        <div class="col-auto position-relative">
+          <a href="carrito.html" class="position-relative">
+            <img src="img_header/carrito_compra.png" alt="Carrito" class="carrito-img" />
+            <span id="contador-carrito" class="badge position-absolute">0</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- NAV MOBILE -->
+      <div class="nav-links-mobile" id="nav-mobile">
+        <button class="cerrar-menu" aria-label="Cerrar menú">✖</button>
+        <a href="index.html">Inicio</a>
+        <a href="Productos.html">Hot sale</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="paginaPrincipal.html">Tendencia</a>
+        <a href="quienessomos.html">Quiénes somos</a>
+        <a href="contacto.html">Contáctanos</a>
+        <div class="mobile-buttons">
+          <a href="#" class="btn btn-registrarse w-100">Registrarse</a>
+          <a href="#" class="btn btn-iniciar w-100">Iniciar sesión</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- Main Content -->
+
+  <div class="container">
+    <h1 class="section-title">Quienes somos</h1>
+    <!-- Section 1: Quienes Somos -->
+    <div class="section">
+      <div class="section-content">
+        <div class="section-image">
+          <img src="img/imagen1.png" alt="Artesanías tradicionales">
+        </div>
+        <div class="section-text justified">
+          <h3 class="section-subtitle">Nuestra Esencia y Propósito</h3>
+          <p class="section-description">
+            En Click & Arte, somos una empresa dedicada a la promoción y comercialización del auténtico arte artesanal
+            peruano. Nuestra misión es clara: ser el puente fiel que une la riqueza cultural del Perú con las tendencias
+            del siglo XXI, llevando estas hermosas creaciones a cualquier rincón del mundo. Nos especializamos en la
+            promoción de objetos artesanales como cerámicos, textiles, platería, y otras formas de arte tradicional que
+            van más allá de una simple artesanía. Es la historia de cada artesano la que engrandece a nuestros
+            realizadores en nuestros valores. Nos comprometemos a brindar la autenticidad y el carácter de cada proyecto
+            o fusión y colecciones únicas. Somos más que una empresa: somos embajadores de la riqueza cultural peruana.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2: Como surge Click & Arte -->
+    <div class="section">
+      <div class="section-content reverse">
+        <div class="section-image">
+          <img src="img/imagen2.png" alt="Arte moderno y tradicional">
+        </div>
+        <div class="section-text justified">
+          <h2 class="section-title">¿Cómo Surge Click & Arte?</h2>
+          <p class="section-description">
+            La creación de Click & Arte nace de la fusión perfecta entre la admiración por el arte y la moderna
+            tecnología. Pensamos en crear un espacio digital innovador, donde el arte peruano pueda encontrar un nuevo
+            hogar en el mundo digital. Al observar cómo las nuevas tecnologías y el mercado han transformado las formas
+            para mostrar y vender productos artesanales, nos inspiramos para crear un espacio en el que no solo se
+            promueva nuestra cultura, sino que también tenga el respeto del arte y expresión del país para exponer la
+            creatividad peruana. Al expandir el rol una empresa y desarrollar tanto una plataforma comercial e
+            innovadora. Nos encargamos de crear artesanos digitales, que promuevan a cada rincón del mundo.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3: Nuestro Compromiso -->
+    <div class="section section-centered">
+      <h2 class="section-title">Nuestro Compromiso y Metodología</h2>
+      <div class="section-content">
+        <div class="section-image">
+          <img src="img/imagen3.png" alt="Compromiso social y metodología">
+        </div>
+        <div class="section-text justified">
+          <p class="section-description">
+            Alianza con Artesanos: En Click & Arte establecemos alianzas estratégicas directamente con artesanos y
+            asociaciones artesanales a nivel nacional, logrando precios más accesibles para brindar un marco digno,
+            participativo en base artesanal, promoviendo competencia con organizaciones de valor a artesanos, logrando
+            que siempre cuenten con nuestros inventarios de ventas y promociones comerciales internacionales en
+            productos artesanales de producciones creativas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="contenedor-footer">
+      <!-- Lado izquierdo -->
+      <div class="lado-izquierdo-footer">
+        <a href="index.html" class="logo-link">
+          <h2>Click y Arte</h2>
+        </a>
+
+        <div class="imagenes-footer">
+          <img src="img_header/tarjetas.png" alt="Métodos de Pago" class="img-footer" />
+          <img src="img_header/redes.png" alt="Redes Sociales" class="img-footer" />
+        </div>
+      </div>
+
+      <!-- Lado derecho -->
+      <div class="lado-derecho-footer">
+        <div class="enlaces-superiores">
+          <a href="libroReclamaciones.html">Libro de reclamaciones</a>
+          <a href="preguntasFrecuentes.html">Preguntas frecuentes</a>
+          <a href="#">Medios</a>
+        </div>
+        <div class="enlaces-inferiores">
+          <a href="tyc.html">Términos del servicio</a>
+          <a href="#">Política de reembolso</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/productos.js"></script>
+  <script src="js/quienesomos.js"></script>
+  <script src="js/global.js"></script>
+
+</body>
+
+</html>

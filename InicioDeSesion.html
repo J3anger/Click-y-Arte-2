@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Click y Arte - Iniciar Sesión</title>
+  <link rel="stylesheet" href="css/InicioDeSesion.css">
+</head>
+
+<body>
+  <!-- Todo el contenido principal envuelto en .main-content -->
+  <div class="main-content">
+
+    <div class="header">
+      <img src="img_ini-reg/calavera.jpg" alt="artesanias 1">
+      <img src="img_ini-reg/jirafa.jpg" alt="artesanias 2">
+      <img src="img_ini-reg/azul.jpg" alt="artesanias 3">
+    </div>
+
+    <div class="container">
+      <div class="left">
+        <h1>Bienvenidos a Click y Arte</h1>
+        <img src="img_header/logo.jpg" alt="logo">
+      </div>
+
+      <div class="form-box">
+        <form id="loginForm">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" placeholder="ejemplo@gmail.com" required>
+
+          <label for="password">Contraseña</label>
+          <div class="password-wrapper">
+            <input type="password" id="password" placeholder="Escribe tu contraseña aquí" required>
+            <span id="togglePassword">👁️</span>
+          </div>
+
+          <a href="#">¿Olvidó su contraseña?</a>
+          <br><br>
+
+          <hr class="acciones-header">
+          <button type="submit" class="btn-negro btn-full">Ingresar</button>
+
+          <div class="social-buttons">
+            <button type="button" onclick="location.href='IniciarSesionGoogle.html'" class="btn-blanco">Iniciar sesión
+              con Google</button>
+            <button type="button" onclick="location.href='IniciarSesionFacebook.html'" class="btn-blanco">Iniciar sesión
+              con Facebook</button>
+          </div>
+        </form>
+
+      </div>
+
+    </div>
+
+    <footer class="footer">
+      Click y Arte &copy; 2025 | Izipay | Visa | MasterCard | Facebook | Instagram | WhatsApp
+    </footer>
+
+    <script src="js/InicioDeSesion.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,357 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BASE ===== */
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===== AVISO SUPERIOR ===== */
+.aviso-contacto {
+  font-size: 0.875rem;
+  background-color: #f1f1f1;
+  color: #333;
+  text-align: center;
+  padding: 5px 0;
+  z-index: 10;
+  position: relative;
+}
+
+/* ===== HEADER ===== */
+.header {
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.header-logo {
+  height: 90px;
+  object-fit: contain;
+}
+
+.header-title {
+  font-family: "Comic Sans MS", cursive;
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  text-align: center;
+  margin-left: 120px;
+}
+
+.header-title:hover {
+  color: #333;
+}
+
+/* ===== BOTONES ===== */
+.btn-registrarse,
+.btn-iniciar {
+  padding: 10px 18px;
+  font-size: 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  min-width: 140px;
+  text-align: center;
+  display: inline-block;
+}
+
+.btn-registrarse {
+  background-color: #000;
+  color: #fff !important;
+  border: none;
+}
+
+.btn-registrarse:hover {
+  background-color: #fff;
+  color: #000 !important;
+  border: 1px solid #000;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-iniciar {
+  border: 1px solid #000;
+  color: #000;
+}
+
+.btn-iniciar:hover {
+  background-color: #000;
+  color: #fff !important;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.acciones {
+  gap: 10px; /* separación entre botones en desktop */
+}
+
+/* ===== ICONOS Y CARRITO ===== */
+.icono,
+.carrito-img {
+  width: 29px;
+  height: 29px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.icono:hover,
+.carrito-img:hover {
+  transform: scale(1.2);
+}
+
+#contador-carrito {
+  font-size: 11px;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: -4px;
+  right: -6px;
+  background-color: #dc3545;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== NAVEGACIÓN DESKTOP ===== */
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* ===== NAVEGACIÓN MOBILE ===== */
+.nav-links-mobile {
+  max-height: 0;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(5px);
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 0;
+  display: flex;
+  transition: max-height 0.4s ease-in-out, padding 0.3s ease;
+}
+
+.nav-links-mobile.active {
+  max-height: 500px;
+  padding: 15px 0;
+  align-items: center;
+}
+
+.nav-links-mobile a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links-mobile a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.cerrar-menu {
+  align-self: flex-end;
+  margin: 0 15px 10px auto;
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: #000;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.cerrar-menu:hover {
+  transform: scale(1.2);
+}
+
+.overlay-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  z-index: 998;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.overlay-menu.active {
+  display: block;
+  opacity: 1;
+}
+
+/* ✅ NUEVO: Estilo de botones en menú móvil */
+.mobile-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  width: 90%;
+}
+
+.mobile-buttons .btn {
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+/* ===== BOTÓN HAMBURGUESA ===== */
+.boton-hamburguesa {
+  background: none;
+  border: 1px solid #000;
+  font-size: 26px;
+  cursor: pointer;
+  color: #000;
+  border-radius: 4px;
+  padding: 2px 6px;
+  transition: transform 0.2s ease;
+}
+
+.boton-hamburguesa:hover {
+  transform: scale(1.1);
+}
+
+/* ===== BUSCADOR ===== */
+.input-busqueda {
+  display: none;
+  width: 0;
+  opacity: 0;
+  padding: 5px 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+.input-busqueda.activo {
+  display: inline-block;
+  width: 130px;
+  opacity: 1;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background-color: #f5f5f5;
+  border-top: 1px solid #ccc;
+  padding: 30px 20px;
+  margin-top: auto;
+}
+
+.contenedor-footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Comic Sans MS", cursive;
+  font-size: 1.75rem;
+}
+
+.lado-izquierdo-footer h2 {
+  font-size: 22px;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.imagenes-footer {
+  display: flex;
+  gap: 10px;
+}
+
+.img-footer {
+  height: 30px;
+  object-fit: contain;
+}
+
+.enlaces-superiores,
+.enlaces-inferiores {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: right;
+}
+
+.enlaces-superiores a,
+.enlaces-inferiores a,
+.contenedor-footer a {
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.enlaces-superiores a:hover,
+.enlaces-inferiores a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .nav-contenido,
+  .acciones,
+  .header-title {
+    display: none !important;
+  }
+
+  .header-logo {
+    margin: 0 auto;
+  }
+
+  .contenedor-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    text-align: left;
+  }
+
+  .enlaces-superiores,
+  .enlaces-inferiores {
+    text-align: left;
+    width: 100%;
+  }
+
+  .imagenes-footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .mobile-buttons .btn {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+}

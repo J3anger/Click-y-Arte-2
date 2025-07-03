@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Carrito</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/carrito.css" />
+  <link rel="stylesheet" href="css/header&fooder.css">
+</head>
+
+<body>
+  <header class="container-fluid border-bottom header header-fullwidth">
+    <!-- AVISO CONTACTO -->
+    <div class="aviso-contacto text-center py-1">
+      <a href="https://wa.me/51939251011" target="_blank" class="mensaje-contacto text-decoration-none text-dark">
+        <strong>¿Quisieras contactar con nosotros? Escríbenos por Whatsapp al +51 939 251 011.</strong>
+      </a>
+    </div>
+
+    <div class="contenido-header">
+      <!-- DESKTOP: Logo, Título y Botones -->
+      <div class="row align-items-center justify-content-between gx-0 d-none d-md-flex">
+        <div class="col-md-2 d-flex justify-content-start align-items-center">
+          <img src="img_header/logo.jpg" alt="Logo Click y Arte" class="header-logo" />
+        </div>
+        <div class="col-md-4 d-flex justify-content-center">
+          <a href="index.html" class="header-title">Click y Arte</a>
+        </div>
+        <div class="col-md-3 d-flex justify-content-end align-items-center acciones pe-3">
+          <a href="#" class="btn btn-registrarse">Registrarse</a>
+          <a href="#" class="btn btn-iniciar">Iniciar sesión</a>
+        </div>
+      </div>
+
+      <!-- MOBILE: Logo centrado -->
+      <div class="row d-flex d-md-none justify-content-center pt-3 pb-2">
+        <div class="col-12 d-flex justify-content-center align-items-center">
+          <img src="img_header/logo.jpg" alt="Logo Click y Arte" class="header-logo logo-mobile" />
+        </div>
+      </div>
+
+      <!-- MOBILE: Lupa, Carrito y Menú hamburguesa -->
+      <div class="row d-flex d-md-none justify-content-between align-items-center px-3 pb-2">
+        <div class="col-auto d-flex align-items-center gap-3">
+          <img src="img_header/buscar.png" alt="Buscar" class="icono" id="icono-buscar" />
+          <a href="carrito.html" class="position-relative">
+            <img src="img_header/carrito_compra.png" alt="Carrito" class="carrito-img" />
+            <span id="contador-carrito" class="badge position-absolute">0</span>
+          </a>
+          <input type="text" id="input-busqueda" class="input-busqueda" placeholder="Buscar..." />
+        </div>
+        <div class="col-auto">
+          <button class="boton-hamburguesa">☰</button>
+        </div>
+      </div>
+
+      <!-- NAV DESKTOP -->
+      <div class="row mt-3 justify-content-center align-items-center gx-0 nav-contenido d-none d-md-flex">
+        <div class="col-auto">
+          <img src="img_header/buscar.png" alt="Buscar" class="icono" />
+        </div>
+        <div class="col-auto d-flex flex-wrap justify-content-center gap-3 nav-links">
+          <a href="index.html">Inicio</a>
+          <a href="Productos.html">Hot sale</a>
+          <a href="tienda.html">Tienda</a>
+          <a href="paginaPrincipal.html">Tendencia</a>
+          <a href="quienessomos.html">Quiénes somos</a>
+          <a href="contacto.html">Contáctanos</a>
+        </div>
+        <div class="col-auto position-relative">
+          <a href="carrito.html" class="position-relative">
+            <img src="img_header/carrito_compra.png" alt="Carrito" class="carrito-img" />
+            <span id="contador-carrito" class="badge position-absolute">0</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- NAV MOBILE -->
+      <div class="nav-links-mobile" id="nav-mobile">
+        <button class="cerrar-menu" aria-label="Cerrar menú">✖</button>
+        <a href="index.html">Inicio</a>
+          <a href="Productos.html">Hot sale</a>
+          <a href="tienda.html">Tienda</a>
+          <a href="paginaPrincipal.html">Tendencia</a>
+          <a href="quienessomos.html">Quiénes somos</a>
+          <a href="contacto.html">Contáctanos</a>
+        <div class="mobile-buttons">
+          <a href="#" class="btn btn-registrarse w-100">Registrarse</a>
+          <a href="#" class="btn btn-iniciar w-100">Iniciar sesión</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="overlay-menu" id="overlay-menu"></div>
+  <main id="carrito-main" class="container">
+    <h1 id="carrito-titulo" class="mb-5 fw-bold">Mi Carrito</h1>
+
+    <div class="table-responsive">
+      <table id="tabla-carrito" class="table align-middle">
+        <thead class="table-light">
+          <tr>
+            <th class="text-uppercase text-start ps-4">Producto</th>
+            <th class="text-uppercase text-center">Cantidad</th>
+            <th class="text-uppercase text-end pe-5">Total</th>
+          </tr>
+        </thead>
+        <tbody id="carrito-body">
+          <!-- Los productos agregados se insertarán aquí dinámicamente -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Subtotal -->
+    <div class="row justify-content-end mt-5">
+      <div class="col-md-4">
+        <div class="subtotal-box text-center">
+          <div class="d-flex justify-content-between mb-2">
+            <p class="fw-semibold mb-0">Subtotal</p>
+            <p id="subtotal" class="fw-semibold mb-0">S/ 0.00</p>
+          </div>
+          <p class="text-muted small mb-3">
+            Impuesto incluido y los gastos de envío se calculan en la pantalla
+            de pago.
+          </p>
+          <a href="pagar.html" class="btn btn-dark w-100 fw-semibold py-3" id="btn-pagar">
+            Pagar pedido
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="contenedor-footer">
+      <!-- Lado izquierdo -->
+      <div class="lado-izquierdo-footer">
+        <a href="#" class="logo-link">
+          <h2>Click y Arte</h2>
+        </a>
+
+        <div class="imagenes-footer">
+          <img src="img_header/tarjetas.png" alt="Métodos de Pago" class="img-footer" />
+          <img src="img_header/redes.png" alt="Redes Sociales" class="img-footer" />
+        </div>
+      </div>
+
+      <!-- Lado derecho -->
+      <div class="lado-derecho-footer">
+        <div class="enlaces-superiores">
+          <a href="libroReclamaciones.html">Libro de reclamaciones</a>
+          <a href="preguntasFrecuentes.html">Preguntas frecuentes</a>
+          <a href="#">Medios</a>
+        </div>
+        <div class="enlaces-inferiores">
+          <a href="tyc.html">Términos del servicio</a>
+          <a href="#">Política de reembolso</a>
+        </div>
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/productos.js"></script>
+</body>
+
+</html>

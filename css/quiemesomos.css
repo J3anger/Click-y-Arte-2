@@ -1,0 +1,138 @@
+/* Reset básico para el main content */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: Arial, sans-serif;
+   background-color: #f5f5f5;
+}
+
+/* Main Content */
+.container {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 40px 20px;
+}
+
+/* Section */
+.section {
+   margin-bottom: 60px;
+}
+
+.section-content {
+   display: flex;
+   align-items: flex-start;
+   gap: 40px;
+   margin-bottom: 40px;
+}
+
+.section-content.reverse {
+   flex-direction: row-reverse;
+}
+
+.section-image {
+   flex: 0 0 400px;
+}
+
+.section-image img {
+   width: 100%;
+   height: 280px;
+   object-fit: cover;
+   border-radius: 8px;
+}
+
+.section-text {
+   flex: 1;
+}
+
+.section-text.justified {
+   text-align: justify;
+}
+
+.section-title {
+   font-size: 32px;
+   color: #070707;
+   margin-bottom: 20px;
+   font-weight: bold;
+}
+
+.section-subtitle {
+   font-size: 24px;
+   color: #333;
+   margin-bottom: 15px;
+   font-weight: 600;
+}
+
+.section-description {
+   font-size: 18px;
+   line-height: 1.6;
+   color: #555;
+}
+
+/* Section 3 - Centered */
+.section-centered {
+   text-align: center;
+}
+
+.section-centered .section-image {
+   flex: none;
+   margin: 0 auto 20px auto;
+   max-width: 600px;
+}
+
+.section-centered .section-image img {
+   height: 400px;
+}
+
+.section-centered .section-content {
+   flex-direction: column;
+   align-items: center;
+}
+
+/* Responsive para Main Content */
+@media (max-width: 768px) {
+   .container {
+       padding: 20px 15px;
+   }
+   
+   .section {
+       margin-bottom: 40px;
+   }
+   
+   .section-content {
+       flex-direction: column;
+       gap: 20px;
+   }
+   
+   .section-content.reverse {
+       flex-direction: column;
+   }
+   
+   .section-image {
+       flex: none;
+       max-width: 100%;
+   }
+   
+   .section-title {
+       font-size: 26px;
+   }
+   
+   .section-subtitle {
+       font-size: 20px;
+   }
+   
+   .section-description {
+       font-size: 16px;
+   }
+   
+   .section-centered .section-image {
+       max-width: 100%;
+   }
+   
+   .section-centered .section-image img {
+       height: 300px;
+   }
+}

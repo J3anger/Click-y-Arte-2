@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #ffe4e1, #f5f5f5);
+  overflow-x: hidden;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.header img {
+  width: 33.33%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container.register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo img {
+  width: 90px;
+  margin-bottom: 10px;
+}
+
+.logo h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #222;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.logo p {
+  font-size: 1em;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.form-box {
+  width: 100%;
+  max-width: 420px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-box input,
+.form-box select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.phone-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.phone-group select,
+.phone-group input {
+  flex: 1;
+}
+
+.form-box input:focus,
+.form-box select:focus {
+  transform: scale(1.03);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.form-box button {
+  width: 100%;
+  padding: 12px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  font-weight: bold;
+}
+
+.form-box button:hover {
+  background-color: #444;
+  transform: scale(1.02);
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-right: 40px;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f1f1f1;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .form-box {
+    width: 90%;
+  }
+
+  .logo h1 {
+    font-size: 1.6em;
+  }
+}

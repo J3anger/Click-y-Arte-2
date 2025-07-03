@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas frecuentes</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/header&fooder.css">
+    <link rel="stylesheet" href="css/preguntasFrecuentes.css">
+</head>
+
+<body>
+    <header class="container-fluid border-bottom header header-fullwidth">
+        <!-- AVISO CONTACTO -->
+        <div class="aviso-contacto text-center py-1">
+            <a href="https://wa.me/51939251011" target="_blank" class="mensaje-contacto text-decoration-none text-dark">
+                <strong>¿Quisieras contactar con nosotros? Escríbenos por Whatsapp al +51 939 251 011.</strong>
+            </a>
+        </div>
+
+        <div class="contenido-header">
+            <!-- DESKTOP: Logo, Título y Botones -->
+            <div class="row align-items-center justify-content-between gx-0 d-none d-md-flex">
+                <div class="col-md-2 d-flex justify-content-start align-items-center">
+                    <img src="img_header/logo.jpg" alt="Logo Click y Arte" class="header-logo" />
+                </div>
+                <div class="col-md-4 d-flex justify-content-center">
+                    <a href="index.html" class="header-title">Click y Arte</a>
+                </div>
+                <div class="col-md-3 d-flex justify-content-end align-items-center acciones pe-3">
+                    <a href="#" class="btn btn-registrarse">Registrarse</a>
+                    <a href="#" class="btn btn-iniciar">Iniciar sesión</a>
+                </div>
+            </div>
+
+            <!-- MOBILE: Logo centrado -->
+            <div class="row d-flex d-md-none justify-content-center pt-3 pb-2">
+                <div class="col-12 d-flex justify-content-center align-items-center">
+                    <img src="img_header/logo.jpg" alt="Logo Click y Arte" class="header-logo logo-mobile" />
+                </div>
+            </div>
+
+            <!-- MOBILE: Lupa, Carrito y Menú hamburguesa -->
+            <div class="row d-flex d-md-none justify-content-between align-items-center px-3 pb-2">
+                <div class="col-auto d-flex align-items-center gap-3">
+                    <img src="img_header/buscar.png" alt="Buscar" class="icono" id="icono-buscar" />
+                    <a href="carrito.html" class="position-relative">
+                        <img src="img_header/carrito_compra.png" alt="Carrito" class="carrito-img" />
+                        <span id="contador-carrito" class="badge position-absolute">0</span>
+                    </a>
+                    <input type="text" id="input-busqueda" class="input-busqueda" placeholder="Buscar..." />
+                </div>
+                <div class="col-auto">
+                    <button class="boton-hamburguesa">☰</button>
+                </div>
+            </div>
+
+            <!-- NAV DESKTOP -->
+            <div class="row mt-3 justify-content-center align-items-center gx-0 nav-contenido d-none d-md-flex">
+                <div class="col-auto">
+                    <img src="img_header/buscar.png" alt="Buscar" class="icono" />
+                </div>
+                <div class="col-auto d-flex flex-wrap justify-content-center gap-3 nav-links">
+                    <a href="index.html">Inicio</a>
+                    <a href="Productos.html">Hot sale</a>
+                    <a href="tienda.html">Tienda</a>
+                    <a href="paginaPrincipal.html">Tendencia</a>
+                    <a href="quienessomos.html">Quiénes somos</a>
+                    <a href="contacto.html">Contáctanos</a>
+                </div>
+                <div class="col-auto position-relative">
+                    <a href="carrito.html" class="position-relative">
+                        <img src="img_header/carrito_compra.png" alt="Carrito" class="carrito-img" />
+                        <span id="contador-carrito" class="badge position-absolute">0</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- NAV MOBILE -->
+            <div class="nav-links-mobile" id="nav-mobile">
+                <button class="cerrar-menu" aria-label="Cerrar menú">✖</button>
+                <a href="index.html">Inicio</a>
+                <a href="Productos.html">Hot sale</a>
+                <a href="tienda.html">Tienda</a>
+                <a href="paginaPrincipal.html">Tendencia</a>
+                <a href="quienessomos.html">Quiénes somos</a>
+                <a href="contacto.html">Contáctanos</a>
+                <div class="mobile-buttons">
+                    <a href="#" class="btn btn-registrarse w-100">Registrarse</a>
+                    <a href="#" class="btn btn-iniciar w-100">Iniciar sesión</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- FONDO OSCURO MODAL -->
+    <div class="overlay-menu" id="overlay-menu"></div>
+
+
+
+
+    <main>
+        <section class="faq container my-5">
+            <h2 class="fw-bold text-uppercase mb-4" style="font-family: 'Comic Sans MS', cursive;">Preguntas Frecuentes
+            </h2>
+
+            <div class="accordion" id="faqAccordion">
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq1">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                            ¿Es necesario registrarme?
+                        </button>
+                    </h2>
+                    <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="faq1"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            El registro es voluntario. Con tu registro podemos ofrecerte recomendaciones de manera
+                            permanente sobre novedades, campañas, articulistas expertos y productos de tu interés.
+                            Además que si no te registrar no podrás realizar ninguna compra.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                            ¿Puedo comprar a través de Click & Arte?
+                        </button>
+                    </h2>
+                    <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Sí, puedes realizar compras directamente desde nuestra plataforma de manera rápida y segura.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                            ¿Qué puede ofrecerme Click & Arte?
+                        </button>
+                    </h2>
+                    <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Acceso a una gran variedad de productos artesanales únicos, personalizables y hechos por
+                            expertos en su arte.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq4">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                            ¿Cómo puedo contactar a los artesanos si algún producto o servicio me interesa?
+                        </button>
+                    </h2>
+                    <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="faq4"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            A través de nuestra plataforma puedes comunicarte directamente con los artesanos mediante
+                            chat o correo.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq5">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                            ¿Tengo que pagar para acceder a Click & Arte?
+                        </button>
+                    </h2>
+                    <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="faq5"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            No, el acceso a la plataforma es gratuito. Solo pagas por los productos o servicios que
+                            adquieras.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq6">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                            ¿Cuál es el rol que cumple el Ministerio de Comercio Exterior y Turismo dentro de Click &
+                            Arte?
+                        </button>
+                    </h2>
+                    <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="faq6"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Brinda apoyo institucional para promover las artesanías peruanas en el mercado nacional e
+                            internacional.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="contenedor-footer">
+            <!-- Lado izquierdo -->
+            <div class="lado-izquierdo-footer">
+                <a href="index.html" class="logo-link">
+                    <h2>Click y Arte</h2>
+                </a>
+
+                <div class="imagenes-footer">
+                    <img src="img_header/tarjetas.png" alt="Métodos de Pago" class="img-footer" />
+                    <img src="img_header/redes.png" alt="Redes Sociales" class="img-footer" />
+                </div>
+            </div>
+
+            <!-- Lado derecho -->
+            <div class="lado-derecho-footer">
+                <div class="enlaces-superiores">
+                    <a href="libroReclamaciones.html">Libro de reclamaciones</a>
+                    <a href="preguntasFrecuentes.html">Preguntas frecuentes</a>
+                    <a href="#">Medios</a>
+                </div>
+                <div class="enlaces-inferiores">
+                    <a href="tyc.html">Términos del servicio</a>
+                    <a href="#">Política de reembolso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/paginaPrincipal.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/productos.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+/* ===== IMAGEN PRINCIPAL DEL PRODUCTO ===== */
+.main-image-wrapper {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.producto-principal {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== MINIATURAS ===== */
+.miniaturas {
+  margin-top: 1rem;
+}
+
+.miniatura-img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.miniatura-img:hover,
+.miniatura-img:focus {
+  transform: scale(1.1);
+}
+
+/* ===== CARRUSEL DE SUGERENCIAS PERSONALIZADO ===== */
+.carrusel-wrapper {
+  position: relative;
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+.sugerencias-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 10px 10px 20px 10px;
+  scroll-snap-type: x mandatory;
+}
+
+.sugerencias-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.producto {
+  flex: 0 0 auto;
+  width: 160px;
+  text-align: center;
+  scroll-snap-align: start;
+}
+
+.producto img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.producto img:hover {
+  transform: scale(1.05);
+}
+
+.producto p {
+  margin: 8px 0 4px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.producto small {
+  display: block;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.producto strong {
+  display: block;
+  font-size: 13px;
+  color: #000;
+}
+
+/* ===== BOTONES DEL CARRUSEL ===== */
+.carrusel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.08);
+  border: none;
+  border-radius: 50%;
+  padding: 10px 14px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.2s ease;
+}
+
+.carrusel-btn:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.carrusel-btn.prev {
+  left: 0;
+}
+
+.carrusel-btn.next {
+  right: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 576px) {
+  .miniatura-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .producto-principal {
+    border-radius: 8px;
+  }
+
+  .main-image-wrapper {
+    max-width: 100%;
+  }
+
+  .producto {
+    width: 130px;
+  }
+
+  .producto img {
+    height: 120px;
+  }
+
+  .producto p {
+    font-size: 12px;
+  }
+
+  .producto small {
+    font-size: 11px;
+  }
+
+  .producto strong {
+    font-size: 12px;
+  }
+}
+.producto a {
+  text-decoration: none;
+  color: inherit;
+}

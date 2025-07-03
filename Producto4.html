@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poncho Andino – Click y Arte</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/productos.css" />
+  <link rel="stylesheet" href="css/header&fooder.css" />
+</head>
+
+<body>
+  <header class="container-fluid border-bottom header header-fullwidth">
+    <!-- AVISO CONTACTO -->
+    <div class="aviso-contacto text-center py-1">
+      <a href="https://wa.me/51939251011" target="_blank" class="mensaje-contacto text-decoration-none text-dark">
+        <strong>¿Quisieras contactar con nosotros? Escríbenos por Whatsapp al +51 939 251 011.</strong>
+      </a>
+    </div>
+
+    <div class="contenido-header">
+      <!-- DESKTOP: Logo, Título y Botones -->
+      <div class="row align-items-center justify-content-between gx-0 d-none d-md-flex">
+        <div class="col-md-2 d-flex justify-content-start align-items-center">
+          <img src="img_header/logo.jpg" alt="Logo Click y Arte" class="header-logo" />
+        </div>
+        <div class="col-md-4 d-flex justify-content-center">
+          <a href="index.html" class="header-title">Click y Arte</a>
+        </div>
+        <div class="col-md-3 d-flex justify-content-end align-items-center acciones pe-3">
+          <a href="#" class="btn btn-registrarse">Registrarse</a>
+          <a href="#" class="btn btn-iniciar">Iniciar sesión</a>
+        </div>
+      </div>
+
+      <!-- MOBILE: Logo centrado -->
+      <div class="row d-flex d-md-none justify-content-center pt-3 pb-2">
+        <div class="col-12 d-flex justify-content-center align-items-center">
+          <img src="img_header/logo.jpg" alt="Logo Click y Arte" class="header-logo logo-mobile" />
+        </div>
+      </div>
+
+      <!-- MOBILE: Lupa, Carrito y Menú hamburguesa -->
+      <div class="row d-flex d-md-none justify-content-between align-items-center px-3 pb-2">
+        <div class="col-auto d-flex align-items-center gap-3">
+          <img src="img_header/buscar.png" alt="Buscar" class="icono" id="icono-buscar" />
+          <a href="carrito.html" class="position-relative">
+            <img src="img_header/carrito_compra.png" alt="Carrito" class="carrito-img" />
+            <span id="contador-carrito" class="badge position-absolute">0</span>
+          </a>
+          <input type="text" id="input-busqueda" class="input-busqueda" placeholder="Buscar..." />
+        </div>
+        <div class="col-auto">
+          <button class="boton-hamburguesa">☰</button>
+        </div>
+      </div>
+
+      <!-- NAV DESKTOP -->
+      <div class="row mt-3 justify-content-center align-items-center gx-0 nav-contenido d-none d-md-flex">
+        <div class="col-auto">
+          <img src="img_header/buscar.png" alt="Buscar" class="icono" />
+        </div>
+        <div class="col-auto d-flex flex-wrap justify-content-center gap-3 nav-links">
+          <a href="index.html">Inicio</a>
+          <a href="Productos.html">Hot sale</a>
+          <a href="tienda.html">Tienda</a>
+          <a href="paginaPrincipal.html">Tendencia</a>
+          <a href="quienessomos.html">Quiénes somos</a>
+          <a href="contacto.html">Contáctanos</a>
+        </div>
+        <div class="col-auto position-relative">
+          <a href="carrito.html" class="position-relative">
+            <img src="img_header/carrito_compra.png" alt="Carrito" class="carrito-img" />
+            <span id="contador-carrito" class="badge position-absolute">0</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- NAV MOBILE -->
+      <div class="nav-links-mobile" id="nav-mobile">
+        <button class="cerrar-menu" aria-label="Cerrar menú">✖</button>
+        <a href="index.html">Inicio</a>
+        <a href="Productos.html">Hot sale</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="paginaPrincipal.html">Tendencia</a>
+        <a href="quienessomos.html">Quiénes somos</a>
+        <a href="contacto.html">Contáctanos</a>
+        <div class="mobile-buttons">
+          <a href="#" class="btn btn-registrarse w-100">Registrarse</a>
+          <a href="#" class="btn btn-iniciar w-100">Iniciar sesión</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- FONDO OSCURO MODAL -->
+  <div class="overlay-menu" id="overlay-menu"></div>
+
+
+
+  <main class="container my-5">
+    <h2 class="fw-bold mb-5 text-uppercase" style="font-family: 'Zen Tokyo Zoo', cursive">
+      Productos
+    </h2>
+
+    <!-- Producto principal -->
+    <div class="row align-items-center">
+      <!-- Imágenes -->
+      <div class="col-md-6 text-center">
+        <div class="main-image-wrapper">
+          <img id="main-img" src="img/img10.png" class="img-fluid producto-principal" alt="Poncho Andino"
+            loading="lazy" />
+        </div>
+        <div class="d-flex justify-content-center gap-2 mt-3 miniaturas">
+          <img src="img/img10.png" class="miniatura-img" onclick="cambiarImagen(this)" alt="Mini 1" loading="lazy" />
+        </div>
+      </div>
+
+      <!-- Información del producto -->
+      <div class="col-md-6">
+        <h3 class="fw-bold">Máscara Ceremonial de Madera "Rostro Ancestral"</h3>
+        <h5 class="text-success fw-semibold">S/ 150.90</h5>
+        <p class="text-muted small">Impuesto incluido</p>
+        <p>
+          Esta imponente máscara ceremonial, tallada a mano en madera, es una pieza que encapsula la rica tradición y el
+          misticismo de las culturas andinas. Cada detalle, desde los ojos profundos hasta los elaborados tocados,
+          refleja la sabiduría y el arte de nuestros antepasados. Ideal como elemento decorativo para tu hogar, esta
+          máscara no solo embellece, sino que también sirve como un recordatorio de la profunda conexión con nuestras
+          raíces y el espíritu ancestral. ¡Una pieza única de arte y cultura! </p>
+        <p class="small">
+          Madera tallada a mano con detalles simbólicos. Uso decorativo o ceremonial.</p>
+        <!-- Cantidad -->
+        <div class="d-flex align-items-center gap-3 my-4">
+          <button class="btn btn-outline-secondary" onclick="cambiarCantidad(-1)">
+            −
+          </button>
+          <input type="text" id="cantidad" class="form-control text-center" value="1" readonly
+            style="max-width: 60px" />
+          <button class="btn btn-outline-secondary" onclick="cambiarCantidad(1)">
+            +
+          </button>
+        </div>
+
+        <!-- Botones de acción -->
+        <div class="d-grid gap-2">
+          <button class="btn btn-dark" onclick="agregarAlCarrito()">
+            Añadir al carrito
+          </button>
+          <button class="btn btn-outline-dark" id="btn-comprar-ahora">Comprar ahora</button>
+        </div>
+      </div>
+    </div>
+    <section class="mt-5">
+      <h4 class="mb-3 fw-bold">Sugerencias</h4>
+
+      <div class="carrusel-wrapper">
+        <button class="carrusel-btn prev" onclick="moverCarrusel(-1)">
+          ‹
+        </button>
+        <div class="sugerencias-carousel" id="carruselProductos">
+          <!-- Productos con link -->
+          <div class="producto">
+            <a href="Producto2.html">
+              <img src="img/img7.png" alt="Chullo peruano" />
+              <p>Vasija Ceremonial</p>
+              <small>Vasija ceremonial de ceramica blanca decorada.</small>
+              <strong>S/ 99.99</strong>
+            </a>
+          </div>
+          <div class="producto">
+            <a href="Producto1.html">
+              <img src="img/aretes.4.png" alt="Bolsos Qepe" />
+              <p>Bolsos Qepe</p>
+              <small>Diseño artesanal ideal para el día a día.</small>
+              <strong>S/ 30.99</strong>
+            </a>
+          </div>
+          <div class="producto">
+            <a href="Productos.html">
+              <img src="img/poncho.png" alt="Chullo peruano" />
+              <p>Poncho Andino</p>
+              <small>Elegancia y cultura en cada hilo.</small>
+              <strong>S/ 99.90</strong>
+            </a>
+          </div>
+          <div class="producto">
+            <a href="Producto3.html">
+              <img src="img/img8.png" alt="Manta de alpaca" />
+              <p>Bufanda Artesanal</p>
+              <small>Tela fina y cálida ideal para el frio.</small>
+              <strong>S/ 49.90</strong>
+            </a>
+          </div>
+          <div class="producto">
+            <a href="producto_tapiz.html">
+              <img src="img/tapiz_lana.png" alt="Tapiz de lana" />
+              <p>Tapiz de lana</p>
+              <small>Arte mural con lana y colores vibrantes.</small>
+              <strong>S/ 53.99</strong>
+            </a>
+          </div>
+          <div class="producto">
+            <a href="producto_bufanda.html">
+              <img src="img/bufanda.png" alt="Bufanda andina" />
+              <p>Bufanda andina</p>
+              <small>Abrigo suave con colores típicos.</small>
+              <strong>S/ 25.99</strong>
+            </a>
+          </div>
+          <div class="producto">
+            <a href="chullo.html">
+              <img src="img/chullo.png" alt="Chullo peruano" />
+              <p>Chullo peruano</p>
+              <small>Tejido andino para clima frío y estilo único.</small>
+              <strong>S/ 22.99</strong>
+            </a>
+          </div>
+          <div class="producto">
+            <a href="Productos.html">
+              <img src="img/poncho.png" alt="Chullo peruano" />
+              <p>Poncho Andino</p>
+              <small>Elegancia y cultura en cada hilo.</small>
+              <strong>S/ 99.90</strong>
+            </a>
+          </div>
+        </div>
+
+        <button class="carrusel-btn next" onclick="moverCarrusel(1)">
+          ›
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="contenedor-footer">
+      <!-- Lado izquierdo -->
+      <div class="lado-izquierdo-footer">
+        <a href="index.html" class="logo-link">
+          <h2>Click y Arte</h2>
+        </a>
+
+        <div class="imagenes-footer">
+          <img src="img_header/tarjetas.png" alt="Métodos de Pago" class="img-footer" />
+          <img src="img_header/redes.png" alt="Redes Sociales" class="img-footer" />
+        </div>
+      </div>
+
+      <!-- Lado derecho -->
+      <<div class="lado-derecho-footer">
+        <div class="enlaces-superiores">
+          <a href="libroReclamaciones.html">Libro de reclamaciones</a>
+          <a href="preguntasFrecuentes.html">Preguntas frecuentes</a>
+          <a href="#">Medios</a>
+        </div>
+        <div class="enlaces-inferiores">
+          <a href="tyc.html">Términos del servicio</a>
+          <a href="#">Política de reembolso</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/productos.js"></script>
+  <script src="js/global.js"></script>
+
+</body>
+
+</html>

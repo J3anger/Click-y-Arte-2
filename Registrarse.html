@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro - Click y Arte</title>
+  <link rel="stylesheet" href="css/Registrarse.css" />
+</head>
+
+<body>
+  <div class="header">
+    <img src="img_ini-reg/calavera.jpg" alt="artesanías 1">
+    <img src="img_ini-reg/jirafa.jpg" alt="artesanías 2">
+    <img src="img_ini-reg/azul.jpg" alt="artesanías 3">
+  </div>
+
+  <div class="container register">
+    <div class="logo">
+      <img src="img_header/logo.jpg" alt="logo Click y Arte" />
+      <h1 class="marquee">Regístrate en Click y Arte</h1>
+      <p class="slide-in">Ingrese los datos que se le solicitarán a continuación:</p>
+    </div>
+
+    <form id="registerForm" class="form-box zoom-in">
+      <input type="text" id="nombres" placeholder="Nombres..." required />
+      <input type="text" id="apellidos" placeholder="Apellidos..." required />
+      <input type="email" id="correo" placeholder="e-mail..." required />
+
+      <div class="phone-group">
+        <select id="codigoPais" required>
+          <option value="+51">🇵🇪 Perú (+51)</option>
+          <option value="+54">🇦🇷 Argentina (+54)</option>
+          <option value="+57">🇨🇴 Colombia (+57)</option>
+          <option value="+1">🇺🇸 Estados Unidos (+1)</option>
+          <option value="+34">🇪🇸 España (+34)</option>
+        </select>
+        <input type="tel" id="telefono" placeholder="Número de teléfono..." maxlength="9" required />
+      </div>
+
+      <input type="text" id="direccion" placeholder="Dirección..." required />
+
+      <select id="tipoDocumento" required>
+        <option value="" disabled selected>Tipo de documento...</option>
+        <option value="dni">DNI</option>
+        <option value="carnet">Carnet de extranjería</option>
+        <option value="pasaporte">Pasaporte</option>
+      </select>
+
+      <input type="text" id="documento" placeholder="Número de documento..." maxlength="8" required />
+
+      <div class="password-wrapper">
+        <input type="password" id="password" placeholder="Escriba su contraseña..." required />
+        <span class="toggle-password" onclick="togglePassword('password', this)">👁️</span>
+      </div>
+
+      <div class="password-wrapper">
+        <input type="password" id="confirmPassword" placeholder="Repita su contraseña..." required />
+        <span class="toggle-password" onclick="togglePassword('confirmPassword', this)">👁️</span>
+      </div>
+
+      <button type="submit">Registrarse</button>
+    </form>
+  </div>
+
+  <footer class="footer">
+    Click y Arte &copy; 2025 | Izipay | Visa | MasterCard | Facebook | Instagram | WhatsApp
+  </footer>
+
+  <script src="js/Registrarse.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+/* === Carrito Principal === */
+#carrito-main {
+  background-color: #fff;
+  padding: 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+#carrito-titulo {
+  text-align: left;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+/* === Productos del carrito === */
+td .producto-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  display: block;
+}
+
+.img-box {
+  min-width: 100px;
+}
+
+/* === Subtotal Box === */
+.subtotal-box {
+  font-size: 18px;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  margin-top: 20px;
+}
+
+/* === Botón Pagar === */
+#btn-pagar {
+  background-color: #161616;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+#btn-pagar:hover {
+  transform: scale(1.05);
+  background-color: #000;
+}
+
+/* === Cantidad y botones === */
+.cantidad {
+  width: 40px;
+  font-weight: bold;
+  font-size: 1rem;
+  background: transparent;
+  border: none;
+  text-align: center;
+}
+
+.btn-mas,
+.btn-menos,
+.btn-eliminar {
+  font-size: 1rem;
+  line-height: 1;
+  padding: 5px 8px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #000;
+  transition: color 0.2s;
+}
+
+.btn-eliminar:hover {
+  color: #dc3545;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  #carrito-main {
+    padding: 20px 10px;
+  }
+
+  #carrito-titulo {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .subtotal-box {
+    text-align: center;
+  }
+
+  td .producto-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .cantidad {
+    width: 30px;
+  }
+
+  .btn-mas,
+  .btn-menos,
+  .btn-eliminar {
+    font-size: 0.9rem;
+  }
+
+  .img-box {
+    min-width: 80px;
+  }
+}

@@ -1,0 +1,660 @@
+/* --- Tu CSS existente (sin cambios) --- */
+main {
+    flex-grow: 1;
+    /* Esto hace que el main ocupe el espacio disponible entre el header y el footer */
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.product-item {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ===== SECCIÓN HERO (CARRUSEL) ===== */
+.hero-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.hero-carousel-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    /* Ajusta la altura según sea necesario */
+    overflow: hidden;
+}
+
+.hero-carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.hero-carousel-slide {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+    /* Oscurece la imagen para que el texto resalte */
+}
+
+.hero-text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 800px;
+}
+
+.hero-text-overlay h1 {
+    font-family: "Comic Sans MS", "Comic Relief", cursive, sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text-overlay p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.btn-discover {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #000;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-discover:hover {
+    background-color: white;
+    color: #000;
+    border: 2px solid #000;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 2rem;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    z-index: 3;
+}
+
+.hero-carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.hero-carousel-btn-prev {
+    left: 20px;
+}
+
+.hero-carousel-btn-next {
+    right: 20px;
+}
+
+.hero-carousel-nav-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 3;
+}
+
+.hero-carousel-dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hero-carousel-dot.active {
+    background-color: white;
+    transform: scale(1.2);
+}
+
+/* ===== SECCIONES DE CONTENIDO GENERALES (TRADICIÓN, LEGADO, ETC.) ===== */
+.tradition-history-section,
+.legacy-section,
+.curated-exhibitions-section,
+.selected-products-section,
+.art-in-numbers-section,
+.join-community-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.tradition-history-section .container,
+.legacy-section .container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+.tradition-history-section .text-content,
+.legacy-section .text-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.tradition-history-section .image-content,
+.legacy-section .image-content {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tradition-history-section img,
+.legacy-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tradition-history-section h2,
+.legacy-section h3,
+.curated-exhibitions-section h2,
+.selected-products-section h2,
+.art-in-numbers-section h2,
+.join-community-section h2 {
+    font-family: "Comic Sans MS", "Comic Relief", cursive, sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.tradition-history-section p,
+.legacy-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.legacy-section ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.legacy-section ul li {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.legacy-section ul li i {
+    color: #28a745;
+    /* Color verde para los íconos de check */
+    margin-right: 10px;
+}
+
+/* SECCIONES CON SUBTÍTULOS */
+.subtitle {
+    font-size: 1.2rem;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+/* ===== SECCIÓN EXHIBICIONES CURADAS ===== */
+.curated-exhibitions-section {
+    background-color: #f9f9f9;
+}
+
+.exhibitions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.exhibition-item {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.exhibition-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.exhibition-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid #eee;
+}
+
+.exhibition-item h3 {
+    font-family: "Comic Sans MS", "Comic Relief", cursive, sans-serif;
+    font-size: 1.7rem;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* ===== SECCIÓN PRODUCTOS SELECCIONADOS ===== */
+.selected-products-section {
+    background-color: #fff;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.product-item {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.product-item h4 {
+    font-family: Arial, sans-serif;
+    /* Mantener una fuente más legible para nombres de productos */
+    font-size: 1.3rem;
+    color: #333;
+    margin: 0 15px 10px;
+}
+
+.product-item .price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+/* ===== SECCIÓN EL ARTE EN NÚMEROS ===== */
+.art-in-numbers-section {
+    color: white;
+    padding: 100px 0;
+    background-attachment: fixed;
+    /* Efecto parallax */
+    position: relative;
+}
+
+.art-in-numbers-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Capa oscura sobre la imagen */
+    z-index: 1;
+}
+
+.art-in-numbers-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.art-in-numbers-section h2 {
+    color: white;
+    margin-bottom: 50px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.stat-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 30px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    /* Efecto de desenfoque en el fondo */
+}
+
+.stat-item i {
+    font-size: 3rem;
+    color: #f8d7da;
+    /* Un color que contraste y resalte */
+    margin-bottom: 15px;
+}
+
+.stat-item .number {
+    font-family: "Comic Sans MS", "Comic Relief", cursive, sans-serif;
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.stat-item p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* ===== SECCIÓN ÚNETE A LA COMUNIDAD ===== */
+.join-community-section {
+    background-color: #f9f9f9;
+}
+
+.join-community-section .content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    text-align: left;
+    margin-top: 40px;
+}
+
+.join-community-section .image-wrapper {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.join-community-section .image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.join-community-section .text-form-wrapper {
+    flex: 1;
+    min-width: 300px;
+}
+
+.join-community-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    min-width: 200px;
+}
+
+.newsletter-form button {
+    padding: 12px 25px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+}
+
+/* ===== RESPONSIVE PARA MAIN ===== */
+@media (max-width: 992px) {
+    .hero-carousel-container {
+        height: 500px;
+    }
+
+    .hero-text-overlay h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-text-overlay p {
+        font-size: 1.3rem;
+    }
+
+    .tradition-history-section .container,
+    .legacy-section .container,
+    .join-community-section .content-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tradition-history-section .text-content,
+    .legacy-section .text-content,
+    .join-community-section .text-form-wrapper {
+        order: 2;
+        /* Para que el texto aparezca después de la imagen en móviles si la imagen está primero */
+    }
+
+    .tradition-history-section .image-content,
+    .legacy-section .image-content,
+    .join-community-section .image-wrapper {
+        order: 1;
+        /* Para que la imagen aparezca antes del texto en móviles */
+    }
+
+    .tradition-history-section h2,
+    .legacy-section h3,
+    .curated-exhibitions-section h2,
+    .selected-products-section h2,
+    .art-in-numbers-section h2,
+    .join-community-section h2 {
+        font-size: 2rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-carousel-container {
+        height: 400px;
+    }
+
+    .hero-text-overlay h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text-overlay p {
+        font-size: 1.1rem;
+    }
+
+    .btn-discover {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+
+    .hero-carousel-btn {
+        padding: 10px;
+        font-size: 1.5rem;
+    }
+
+    .hero-carousel-btn-prev {
+        left: 10px;
+    }
+
+    .hero-carousel-btn-next {
+        right: 10px;
+    }
+
+    .tradition-history-section,
+    .legacy-section,
+    .curated-exhibitions-section,
+    .selected-products-section,
+    .art-in-numbers-section,
+    .join-community-section {
+        padding: 60px 0;
+    }
+
+    .tradition-history-section h2,
+    .legacy-section h3,
+    .curated-exhibitions-section h2,
+    .selected-products-section h2,
+    .art-in-numbers-section h2,
+    .join-community-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .exhibitions-grid,
+    .products-grid,
+    .stats-grid {
+        grid-template-columns: 1fr;
+        /* Una columna en pantallas pequeñas */
+    }
+
+    .product-item h4 {
+        font-size: 1.2rem;
+    }
+
+    .product-item .price {
+        font-size: 1.3rem;
+    }
+
+    .stat-item .number {
+        font-size: 2.2rem;
+    }
+
+    .stat-item p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-carousel-container {
+        height: 350px;
+    }
+
+    .hero-text-overlay {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .hero-text-overlay h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero-text-overlay p {
+        font-size: 0.9rem;
+    }
+
+    .btn-discover {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .hero-carousel-btn {
+        display: none;
+        /* Oculta los botones de navegación en móviles muy pequeños */
+    }
+
+    .tradition-history-section,
+    .legacy-section,
+    .curated-exhibitions-section,
+    .selected-products-section,
+    .art-in-numbers-section,
+    .join-community-section {
+        padding: 40px 0;
+    }
+
+    .tradition-history-section p,
+    .legacy-section p,
+    .legacy-section ul li,
+    .join-community-section p {
+        font-size: 1rem;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100%;
+        margin-left: 0;
+    }
+}

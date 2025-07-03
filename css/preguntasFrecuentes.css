@@ -1,0 +1,130 @@
+/* ===== PREGUNTAS FRECUENTES ===== */
+section.faq {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.faq h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  font-family: 'Comic Sans MS', cursive;
+  letter-spacing: 1px;
+  text-align: left;
+  border-left: 5px solid #000;
+  padding-left: 10px;
+}
+
+.accordion-item {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  border-radius: 0;
+  margin-bottom: 10px;
+  background-color: transparent;
+}
+
+.accordion-button {
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #000;
+  padding: 1rem 0;
+  box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #000;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border: none;
+}
+
+.accordion-body {
+  font-size: 0.95rem;
+  color: #444;
+  padding-bottom: 1rem;
+}
+
+.accordion-button::after {
+  transition: transform 0.3s ease;
+}
+
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(90deg);
+}
+
+
+.modal-custom {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content-custom {
+  background: white;
+  width: 90%;
+  max-width: 600px;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 10px;
+  height: 80vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content-custom iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  flex: 1;
+}
+
+.cerrar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.cerrar:hover {
+  color: #000;
+}
+
+/* ===== RESPONSIVE FAQ ===== */
+@media (max-width: 768px) {
+  section.faq {
+    padding: 1.5rem 1rem;
+  }
+
+  .faq h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    padding-left: 0;
+    border-left: none;
+    border-bottom: 2px solid #000;
+    padding-bottom: 0.5rem;
+  }
+
+  .accordion-button {
+    font-size: 0.95rem;
+  }
+
+  .accordion-body {
+    font-size: 0.9rem;
+  }
+}

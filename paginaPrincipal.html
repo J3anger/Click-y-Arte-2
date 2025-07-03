@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/header&fooder.css">
+    <link rel="stylesheet" href="css/paginaPrincipal.css">
+    <title>Click & Arte</title>
+</head>
+
+<body>
+    <header class="container-fluid border-bottom header header-fullwidth">
+        <!-- AVISO CONTACTO -->
+        <div class="aviso-contacto text-center py-1">
+            <a href="https://wa.me/51939251011" target="_blank" class="mensaje-contacto text-decoration-none text-dark">
+                <strong>¿Quisieras contactar con nosotros? Escríbenos por Whatsapp al +51 939 251 011.</strong>
+            </a>
+        </div>
+
+        <div class="contenido-header">
+            <!-- DESKTOP: Logo, Título y Botones -->
+            <div class="row align-items-center justify-content-between gx-0 d-none d-md-flex">
+                <div class="col-md-2 d-flex justify-content-start align-items-center">
+                    <img src="img_header/logo.jpg" alt="Logo Click y Arte" class="header-logo" />
+                </div>
+                <div class="col-md-4 d-flex justify-content-center">
+                    <a href="index.html" class="header-title">Click y Arte</a>
+                </div>
+                <div class="col-md-3 d-flex justify-content-end align-items-center acciones pe-3">
+                    <a href="#" class="btn btn-registrarse">Registrarse</a>
+                    <a href="#" class="btn btn-iniciar">Iniciar sesión</a>
+                </div>
+            </div>
+
+            <!-- MOBILE: Logo centrado -->
+            <div class="row d-flex d-md-none justify-content-center pt-3 pb-2">
+                <div class="col-12 d-flex justify-content-center align-items-center">
+                    <img src="img_header/logo.jpg" alt="Logo Click y Arte" class="header-logo logo-mobile" />
+                </div>
+            </div>
+
+            <!-- MOBILE: Lupa, Carrito y Menú hamburguesa -->
+            <div class="row d-flex d-md-none justify-content-between align-items-center px-3 pb-2">
+                <div class="col-auto d-flex align-items-center gap-3">
+                    <img src="img_header/buscar.jpg" alt="Buscar" class="icono" id="icono-buscar" />
+                    <a href="carrito.html" class="position-relative">
+                        <img src="img_header/carrito_compra.png" alt="Carrito" class="carrito-img" />
+                        <span id="contador-carrito" class="badge position-absolute">0</span>
+                    </a>
+                    <input type="text" id="input-busqueda" class="input-busqueda" placeholder="Buscar..." />
+                </div>
+                <div class="col-auto">
+                    <button class="boton-hamburguesa">☰</button>
+                </div>
+            </div>
+
+            <!-- NAV DESKTOP -->
+            <div class="row mt-3 justify-content-center align-items-center gx-0 nav-contenido d-none d-md-flex">
+                <div class="col-auto">
+                    <img src="img_header/buscar.png" alt="Buscar" class="icono" />
+                </div>
+                <div class="col-auto d-flex flex-wrap justify-content-center gap-3 nav-links">
+                    <a href="index.html">Inicio</a>
+                    <a href="Productos.html">Hot sale</a>
+                    <a href="tienda.html">Tienda</a>
+                    <a href="paginaPrincipal.html">Tendencia</a>
+                    <a href="quienessomos.html">Quiénes somos</a>
+                    <a href="contacto.html">Contáctanos</a>
+                </div>
+                <div class="col-auto position-relative">
+                    <a href="carrito.html" class="position-relative">
+                        <img src="img_header/carrito_compra.png" alt="Carrito" class="carrito-img" />
+                        <span id="contador-carrito" class="badge position-absolute">0</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- NAV MOBILE -->
+            <div class="nav-links-mobile" id="nav-mobile">
+                <button class="cerrar-menu" aria-label="Cerrar menú">✖</button>
+                <a href="index.html">Inicio</a>
+                <a href="Productos.html">Hot sale</a>
+                <a href="tienda.html">Tienda</a>
+                <a href="paginaPrincipal.html">Tendencia</a>
+                <a href="quienessomos.html">Quiénes somos</a>
+                <a href="contacto.html">Contáctanos</a>
+                <div class="mobile-buttons">
+                    <a href="#" class="btn btn-registrarse w-100">Registrarse</a>
+                    <a href="#" class="btn btn-iniciar w-100">Iniciar sesión</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- FONDO OSCURO MODAL -->
+    <div class="overlay-menu" id="overlay-menu"></div>
+
+    <main class="container py-4">
+        <section id="carouselExampleIndicators" class="carousel slide mb-5" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/ARTESANIA1.jpg" class="d-block w-100" alt="Artesanías 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/ARTESANIA2.jpg" class="d-block w-100" alt="Artesanías 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/ARTESANIA3.jpg" class="d-block w-100" alt="Artesanías 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </section>
+
+
+        <section class="mb-5">
+            <h2 class="mb-4">Tendencia</h2>
+            <div class="row align-items-stretch">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100"> <img src="img/artToys.jpg" class="card-img-top img-tendencia"
+                            alt="Art Toys">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Art Toys:</h5>
+                            <p class="card-text flex-grow-1"> Expresiones de arte moderno en figuras coleccionables.
+                                Cada pieza es
+                                única y representa la fusión entre la cultura pop y la creatividad artesanal. ¡Descubre
+                                tu favorito!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="img/imagen9.png" class="card-img-top img-tendencia" alt="Cuadros y Pinturas">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Cuadros & Pinturas:</h5>
+                            <p class="card-text flex-grow-1">
+                                Obras que cuentan historias andinas con un toque contemporáneo.
+                                Perfectas para llenar tus espacios de color, identidad y tradición.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="img/tazas.jpg" class="card-img-top img-tendencia" alt="Tazas y Accesorios">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Tazas & Accesorios</h5>
+                            <p class="card-text flex-grow-1">
+                                Diseños hechos a mano con inspiración ancestral. Ideales para
+                                acompañarte en tu día a día con un pedacito de arte peruano.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="decoracion-identidad container my-5">
+            <div class="row justify-content-center align-items-center text-center text-md-start">
+                <div class="col-md-5">
+                    <h3 class="fw-bold mb-3">Decoración con identidad</h3>
+
+                    <p><strong>Arte que cuenta historias</strong><br>
+                        Esta pieza artesanal está inspirada en la cultura andina. Cada color y trazo refleja la riqueza
+                        simbólica de nuestras tradiciones.</p>
+
+                    <p><strong>Hecho a mano con pasión</strong><br>
+                        Elaborado cuidadosamente por artesanos locales, este artículo combina técnica ancestral con un
+                        diseño vibrante y moderno.</p>
+
+                    <p><strong>Ideal para regalar o coleccionar</strong><br>
+                        Perfecto para dar un toque único a tu hogar o sorprender a alguien especial.</p>
+
+                </div>
+
+                <div class="col-md-4 mt-4 mt-md-0 text-center">
+                    <img src="img/llamaDecorativa.jpg" alt="Llama decorativa" class="img-fluid imagen-llama">
+                </div>
+            </div>
+        </section>
+
+
+        <section class="mb-5">
+            <h4 class="mb-4">Próximos lanzamientos</h4>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="img/instrumentoDeco.jpg" class="img-fluid" alt="Oferta 1">
+                    <p>
+                        <strong id="subtitulo">Instrumentos decorativos pintados a mano</strong><br>
+                        Una explosión de color y tradición. Estos instrumentos artesanales no solo decoran, también
+                        transmiten la energía de nuestras raíces. <br>
+                        S/. 170.00
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <img src="img/cojinTejido.jpg" class="img-fluid" alt="Oferta 2">
+                    <strong id="subtitulo">Cojines con tejidos andinos</strong><br>
+                    Comodidad con historia. Cada cojín está adornado con textiles tradicionales que llenan tus espacios
+                    de identidad y calidez. <br>
+                    S/. 79.00
+                </div>
+                <div class="col-md-4">
+                    <img src="img/mascaraTallada.jpg" class="img-fluid" alt="Oferta 3">
+                    <strong id="subtitulo">Máscaras rituales talladas en madera</strong><br>
+                    Símbolos de sabiduría y conexión ancestral. Estas máscaras hechas a mano representan la
+                    espiritualidad de los pueblos originarios y aportan un toque místico a cualquier espacio.<br>
+                    S/. 215.00
+                </div>
+            </div>
+        </section>
+
+        <aside class="mb-5 testimonios">
+            <h4 class="mb-4">Lo que dicen nuestros clientes</h4>
+            <div class="row g-3">
+                <div class="col-md-3 col-sm-6">
+                    <div class="tarjeta-testimonio p-3 h-100 d-flex flex-column">
+                        <p class="comentario flex-grow-1">“Un trabajo fantástico. Superó por mucho mis expectativas.”
+                        </p>
+                        <div class="usuario d-flex align-items-center mt-3">
+                            <img src="img/jesusDiaz.jpg" class="foto-usuario me-2">
+                            <span class="nombre-usuario">Jesús Díaz</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="tarjeta-testimonio p-3 h-100 d-flex flex-column">
+                        <p class="comentario flex-grow-1">“Recibí un excelente producto y el diseño final es justo lo
+                            que
+                            necesitaba.”</p>
+                        <div class="usuario d-flex align-items-center mt-3">
+                            <img src="img/pou.jpg" class="foto-usuario me-2">
+                            <span class="nombre-usuario">Alexander Salazar</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="tarjeta-testimonio p-3 h-100 d-flex flex-column">
+                        <p class="comentario flex-grow-1">“¡Absolutamente encantado! Una reseña muy positiva para este
+                            diseñador.”
+                        </p>
+                        <div class="usuario d-flex align-items-center mt-3">
+                            <img src="img/tecnico.jpg" class="foto-usuario me-2">
+                            <span class="nombre-usuario">Jim Benites</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="tarjeta-testimonio p-3 h-100 d-flex flex-column">
+                        <p class="comentario flex-grow-1">“Productos con excelente calidad, totalmente recomendado.”</p>
+                        <div class="usuario d-flex align-items-center mt-3">
+                            <img src="img/chanameme.jpg" class="foto-usuario me-2">
+                            <span class="nombre-usuario">Cristhian Chanamé</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <section class="destacado-arte my-5">
+            <div class="container py-4 px-5 rounded">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h5 class="fw-bold mb-0">Descubre aún más la riqueza <br>del arte peruano</h5>
+                    </div>
+                    <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                        <a href="#" class="btn btn-light boton-cultural">
+                            Conoce un poco más sobre nuestra historia cultural
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+
+    <footer class="footer">
+        <div class="contenedor-footer">
+            <!-- Lado izquierdo -->
+            <div class="lado-izquierdo-footer">
+                <a href="index.html" class="logo-link">
+                    <h2>Click y Arte</h2>
+                </a>
+
+                <div class="imagenes-footer">
+                    <img src="img_header/tarjetas.png" alt="Métodos de Pago" class="img-footer" />
+                    <img src="img_header/redes.png" alt="Redes Sociales" class="img-footer" />
+                </div>
+            </div>
+
+            <!-- Lado derecho -->
+            <div class="lado-derecho-footer">
+                <div class="enlaces-superiores">
+                    <a href="libroReclamaciones.html">Libro de reclamaciones</a>
+                    <a href="preguntasFrecuentes.html">Preguntas frecuentes</a>
+                    <a href="#">Medios</a>
+                </div>
+                <div class="enlaces-inferiores">
+                    <a href="tyc.html">Términos del servicio</a>
+                    <a href="#">Política de reembolso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/paginaPrincipal.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/productos.js"></script>
+</body>
+
+</html>
