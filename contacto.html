@@ -1,173 +1,265 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contáctanos</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/header&fooder.css" />
+    <link rel="stylesheet" href="css/incioDeSesion.css">
+    <link rel="stylesheet" href="css/contacto.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contáctanos</title>
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/header&fooder.css">
-  <link rel="stylesheet" href="css/contacto.css" />
-</head>
+  <body>
+    <header class="container-fluid border-bottom header header-fullwidth">
+  <div class="aviso-contacto text-center py-1">
+    <a href="https://wa.me/51939251011" target="_blank" class="mensaje-contacto text-decoration-none text-dark">
+      <strong>¿Quisieras contactar con nosotros? Escríbenos por Whatsapp al +51 939 251 011.</strong>
+    </a>
+  </div>
 
-<body>
-  <header class="container-fluid border-bottom header header-fullwidth">
-    <!-- AVISO CONTACTO -->
-    <div class="aviso-contacto text-center py-1">
-      <a href="https://wa.me/51939251011" target="_blank" class="mensaje-contacto text-decoration-none text-dark">
-        <strong>¿Quisieras contactar con nosotros? Escríbenos por Whatsapp al +51 939 251 011.</strong>
-      </a>
+  <div class="contenido-header">
+    <div class="row align-items-center justify-content-between gx-0 d-none d-md-flex">
+      <div class="col-md-2 d-flex justify-content-start align-items-center">
+        <img src="img_header/logo.jpg" alt="Logo Click y Arte" class="header-logo" />
+      </div>
+      <div class="col-md-4 d-flex justify-content-center">
+        <a href="index.html" class="header-title">Click y Arte</a>
+      </div>
+      <div class="col-md-3 d-flex justify-content-end align-items-center acciones pe-3">
+        <button class="btn btn-registrarse" id="abrirRegistro">Registrarse</button>
+        <button class="btn btn-iniciar" id="abrirLogin">Iniciar sesión</button>
+      </div>
     </div>
 
-    <div class="contenido-header">
-      <!-- DESKTOP: Logo, Título y Botones -->
-      <div class="row align-items-center justify-content-between gx-0 d-none d-md-flex">
-        <div class="col-md-2 d-flex justify-content-start align-items-center">
-          <img src="img_header/logo.jpg" alt="Logo Click y Arte" class="header-logo" />
-        </div>
-        <div class="col-md-4 d-flex justify-content-center">
-          <a href="index.html" class="header-title">Click y Arte</a>
-        </div>
-        <div class="col-md-3 d-flex justify-content-end align-items-center acciones pe-3">
-          <a href="#" class="btn btn-registrarse">Registrarse</a>
-          <a href="#" class="btn btn-iniciar">Iniciar sesión</a>
-        </div>
+    <div class="row d-flex d-md-none justify-content-center pt-3 pb-2">
+      <div class="col-12 d-flex justify-content-center align-items-center">
+        <img src="img_header/logo.jpg" alt="Logo Click y Arte" class="header-logo logo-mobile" />
       </div>
+    </div>
 
-      <!-- MOBILE: Logo centrado -->
-      <div class="row d-flex d-md-none justify-content-center pt-3 pb-2">
-        <div class="col-12 d-flex justify-content-center align-items-center">
-          <img src="img_header/logo.jpg" alt="Logo Click y Arte" class="header-logo logo-mobile" />
-        </div>
+    <div class="row d-flex d-md-none justify-content-between align-items-center px-3 pb-2">
+      <div class="col-auto d-flex align-items-center gap-3">
+        <img src="img_header/buscar.png" alt="Buscar" class="icono" id="icono-buscar" />
+        <a href="carrito.html" class="position-relative">
+          <img src="img_header/carrito_compra.png" alt="Carrito" class="carrito-img" />
+          <span id="contador-carrito" class="badge position-absolute">0</span>
+        </a>
+        <input type="text" id="input-busqueda" class="input-busqueda" placeholder="Buscar..." />
       </div>
-
-      <!-- MOBILE: Lupa, Carrito y Menú hamburguesa -->
-      <div class="row d-flex d-md-none justify-content-between align-items-center px-3 pb-2">
-        <div class="col-auto d-flex align-items-center gap-3">
-          <img src="img_header/buscar.png" alt="Buscar" class="icono" id="icono-buscar" />
-          <a href="carrito.html" class="position-relative">
-            <img src="img_header/carrito_compra.png" alt="Carrito" class="carrito-img" />
-            <span id="contador-carrito" class="badge position-absolute">0</span>
-          </a>
-          <input type="text" id="input-busqueda" class="input-busqueda" placeholder="Buscar..." />
-        </div>
-        <div class="col-auto">
-          <button class="boton-hamburguesa">☰</button>
-        </div>
+      <div class="col-auto">
+        <button class="boton-hamburguesa">☰</button>
       </div>
+    </div>
 
-      <!-- NAV DESKTOP -->
-      <div class="row mt-3 justify-content-center align-items-center gx-0 nav-contenido d-none d-md-flex">
-        <div class="col-auto">
-          <img src="img_header/buscar.png" alt="Buscar" class="icono" />
-        </div>
-        <div class="col-auto d-flex flex-wrap justify-content-center gap-3 nav-links">
-          <a href="index.html">Inicio</a>
-          <a href="Productos.html">Hot sale</a>
-          <a href="tienda.html">Tienda</a>
-          <a href="paginaPrincipal.html">Tendencia</a>
-          <a href="quienessomos.html">Quiénes somos</a>
-          <a href="contacto.html">Contáctanos</a>
-        </div>
-        <div class="col-auto position-relative">
-          <a href="carrito.html" class="position-relative">
-            <img src="img_header/carrito_compra.png" alt="Carrito" class="carrito-img" />
-            <span id="contador-carrito" class="badge position-absolute">0</span>
-          </a>
-        </div>
+    <div class="row mt-3 justify-content-center align-items-center gx-0 nav-contenido d-none d-md-flex">
+      <div class="col-auto">
+        <img src="img_header/buscar.png" alt="Buscar" class="icono" />
       </div>
-
-      <!-- NAV MOBILE -->
-      <div class="nav-links-mobile" id="nav-mobile">
-        <button class="cerrar-menu" aria-label="Cerrar menú">✖</button>
+      <div class="col-auto d-flex flex-wrap justify-content-center gap-3 nav-links">
         <a href="index.html">Inicio</a>
         <a href="Productos.html">Hot sale</a>
         <a href="tienda.html">Tienda</a>
         <a href="paginaPrincipal.html">Tendencia</a>
         <a href="quienessomos.html">Quiénes somos</a>
         <a href="contacto.html">Contáctanos</a>
-        <div class="mobile-buttons">
-          <a href="#" class="btn btn-registrarse w-100">Registrarse</a>
-          <a href="#" class="btn btn-iniciar w-100">Iniciar sesión</a>
-        </div>
       </div>
-    </div>
-  </header>
-
-  <!-- FONDO OSCURO MODAL -->
-  <div class="overlay-menu" id="overlay-menu"></div>
-
-
-
-
-  <!-- Contenido principal -->
-  <main class="contenedor">
-    <section class="formulario">
-      <h2 class="titulo">Contáctanos</h2>
-      <p>Bríndanos tus datos</p>
-      <form id="form-contacto">
-        <div class="fila">
-          <input type="text" placeholder="Nombres" required />
-          <input type="text" placeholder="Apellidos" required />
-        </div>
-        <input type="email" placeholder="ejemplo@gmail.com" required />
-        <textarea placeholder="Descríbenos el problema para contactarnos contigo..." required></textarea>
-        <button type="submit">Enviar</button>
-      </form>
-      <img src="img/ceramica.jpg" alt="Cerámica" class="img-abajo">
-    </section>
-
-    <section class="mensaje">
-      <img src="img/manosartesanas.jpeg" alt="Manos artesanas">
-      <h3>Compromiso con la autenticidad y la confianza</h3>
-      <p>
-        En Click y Arte creemos que cada obra artesanal cuenta una historia, y por eso nos aseguramos de que cada
-        producto ofrecido en nuestra plataforma sea auténtico, original y hecho a mano por artesanos locales que dominan
-        técnicas tradicionales transmitidas de generación en generación. <br><br>
-        Trabajamos directamente con los creadores para garantizar que no haya intermediarios que alteren el valor
-        cultural o la calidad del trabajo. <br><br>
-        Además, hemos implementado un sitio seguro y moderno, con múltiples métodos de pago confiables. Te invitamos a
-        ser parte de esta experiencia.
-      </p>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="contenedor-footer">
-      <!-- Lado izquierdo -->
-      <div class="lado-izquierdo-footer">
-        <a href="index.html" class="logo-link">
-          <h2>Click y Arte</h2>
+      <div class="col-auto position-relative">
+        <a href="carrito.html" class="position-relative">
+          <img src="img_header/carrito_compra.png" alt="Carrito" class="carrito-img" />
+          <span id="contador-carrito" class="badge position-absolute">0</span>
         </a>
-
-        <div class="imagenes-footer">
-          <img src="img_header/tarjetas.png" alt="Métodos de Pago" class="img-footer" />
-          <img src="img_header/redes.png" alt="Redes Sociales" class="img-footer" />
-        </div>
-      </div>
-
-      <!-- Lado derecho -->
-      <div class="lado-derecho-footer">
-        <div class="enlaces-superiores">
-          <a href="libroReclamaciones.html">Libro de reclamaciones</a>
-          <a href="preguntasFrecuentes.html">Preguntas frecuentes</a>
-          <a href="#">Medios</a>
-        </div>
-        <div class="enlaces-inferiores">
-          <a href="tyc.html">Términos del servicio</a>
-          <a href="#">Política de reembolso</a>
-        </div>
       </div>
     </div>
-  </footer>
 
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/paginaPrincipal.js"></script>
-  <script src="js/global.js"></script>
-  <script src="js/productos.js"></script>
-</body>
+    <div class="nav-links-mobile" id="nav-mobile">
+      <button class="cerrar-menu" aria-label="Cerrar menú">✖</button>
+      <a href="index.html">Inicio</a>
+      <a href="Productos.html">Hot sale</a>
+      <a href="tienda.html">Tienda</a>
+      <a href="paginaPrincipal.html">Tendencia</a>
+      <a href="quienessomos.html">Quiénes somos</a>
+      <a href="contacto.html">Contáctanos</a>
+      <div class="mobile-buttons">
+        <button class="btn btn-registrarse w-100" id="abrirRegistroMobile">Registrarse</button>
+        <button class="btn btn-iniciar w-100" id="abrirLoginMobile">Iniciar sesión</button>
+      </div>
+    </div>
+  </div>
+</header>
 
-</body>
+<!-- Modal de Registro -->
+<div id="modalRegistro" class="modal">
+  <div class="modal-content animate">
+    <!-- Botón de Cerrar (X) -->
+    <span class="cerrar" id="cerrarRegistro">&times;</span>
+    
+    <div class="modal-header">
+      <img src="img_header/logo.jpg" alt="Logo Click y Arte" class="modal-logo" />
+      <h2>Regístrate en Click y Arte</h2>
+      <!-- Aquí el texto de introducción, ahora debajo del logo -->
+      <p class="slide-in">Ingresa los datos que se le solicitarán a continuación:</p>
+    </div>
+    <form id="registerForm" class="form-box zoom-in">
+      <input type="text" id="nombres" placeholder="Nombres..." required />
+      <input type="text" id="apellidos" placeholder="Apellidos..." required />
+      <input type="email" id="correo" placeholder="e-mail..." required />
+      <div class="phone-group">
+        <select id="codigoPais" required>
+          <option value="+51">🇵🇪 Perú (+51)</option>
+          <option value="+54">🇦🇷 Argentina (+54)</option>
+          <option value="+57">🇨🇴 Colombia (+57)</option>
+          <option value="+1">🇺🇸 Estados Unidos (+1)</option>
+          <option value="+34">🇪🇸 España (+34)</option>
+        </select>
+        <input type="tel" id="telefono" placeholder="Número de teléfono..." maxlength="9" required />
+      </div>
+      <input type="text" id="direccion" placeholder="Dirección..." required />
+      <select id="tipoDocumento" required>
+        <option value="" disabled selected>Tipo de documento...</option>
+        <option value="dni">DNI</option>
+        <option value="carnet">Carnet de extranjería</option>
+        <option value="pasaporte">Pasaporte</option>
+      </select>
+      <input type="text" id="documento" placeholder="Número de documento..." maxlength="8" required />
+      <div class="password-wrapper">
+        <input type="password" id="password" placeholder="Escriba su contraseña..." required />
+        <span class="toggle-password" onclick="togglePassword('password', this)">👁️</span>
+      </div>
+      <div class="password-wrapper">
+        <input type="password" id="confirmPassword" placeholder="Repita su contraseña..." required />
+        <span class="toggle-password" onclick="togglePassword('confirmPassword', this)">👁️</span>
+      </div>
+      <button type="submit">Registrarse</button>
+    </form>
+  </div>
+</div>
 
+
+
+<div id="modalLogin" class="modal">
+  <div class="modal-content animate">
+    <span class="cerrar" id="cerrarLogin">&times;</span>
+
+    <!-- Título del modal -->
+    <div class="modal-header">
+      <img src="img_header/logo.jpg" alt="Logo Click y Arte" class="modal-logo" />
+      <h2>Inicia sesión en Click y Arte</h2>
+    </div>
+
+    <!-- Descripción debajo del título -->
+    <div class="modal-description">
+      <p>Accede a tu cuenta para disfrutar del arte.</p>
+    </div>
+
+    <!-- Formulario de inicio de sesión -->
+    <div class="login-form">
+      <form id="loginForm" class="form-box">
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" placeholder="ejemplo@gmail.com" required />
+
+        <label for="password">Contraseña</label>
+        <div class="password-wrapper">
+          <input type="password" id="password" placeholder="Ingresa tu contraseña" required />
+          <span class="toggle-password" onclick="togglePassword('password', this)">👁️</span>
+        </div>
+
+        <a href="#" class="olvido-pass">¿Olvidaste tu contraseña?</a>
+        <button type="submit" class="btn-iniciar">Ingresar</button>
+
+        <div class="social-buttons">
+          <button type="button" onclick="location.href='IniciarSesionGoogle.html'" class="btn-social google">
+            Iniciar sesión con Google
+          </button>
+          <button type="button" onclick="location.href='IniciarSesionFacebook.html'" class="btn-social facebook">
+            Iniciar sesión con Facebook
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+    <div class="overlay-menu" id="overlay-menu"></div>
+    <main class="contenedor">
+      <section class="formulario">
+        <h2 class="titulo">Contáctanos</h2>
+        <p>Bríndanos tus datos</p>
+        <form id="form-contacto">
+          <div class="fila">
+            <input type="text" placeholder="Nombres" required />
+            <input type="text" placeholder="Apellidos" required />
+          </div>
+          <input type="email" placeholder="ejemplo@gmail.com" required />
+          <textarea
+            placeholder="Descríbenos el problema para contactarnos contigo..."
+            required
+          ></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+        <img src="img/ceramica.jpg" alt="Cerámica" class="img-abajo" />
+      </section>
+
+      <section class="mensaje">
+        <img src="img/manosartesanas.jpeg" alt="Manos artesanas" />
+        <h3>Compromiso con la autenticidad y la confianza</h3>
+        <p>
+          En Click y Arte creemos que cada obra artesanal cuenta una historia, y
+          por eso nos aseguramos de que cada producto ofrecido en nuestra
+          plataforma sea auténtico, original y hecho a mano por artesanos
+          locales que dominan técnicas tradicionales transmitidas de generación
+          en generación. <br /><br />
+          Trabajamos directamente con los creadores para garantizar que no haya
+          intermediarios que alteren el valor cultural o la calidad del trabajo.
+          <br /><br />
+          Además, hemos implementado un sitio seguro y moderno, con múltiples
+          métodos de pago confiables. Te invitamos a ser parte de esta
+          experiencia.
+        </p>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="contenedor-footer">
+        <!-- Lado izquierdo -->
+        <div class="lado-izquierdo-footer">
+          <a href="index.html" class="logo-link">
+            <h2>Click y Arte</h2>
+          </a>
+
+          <div class="imagenes-footer">
+            <img
+              src="img_header/tarjetas.png"
+              alt="Métodos de Pago"
+              class="img-footer"
+            />
+            <img
+              src="img_header/redes.png"
+              alt="Redes Sociales"
+              class="img-footer"
+            />
+          </div>
+        </div>
+
+        <!-- Lado derecho -->
+        <div class="lado-derecho-footer">
+          <div class="enlaces-superiores">
+            <a href="libroReclamaciones.html">Libro de reclamaciones</a>
+            <a href="preguntasFrecuentes.html">Preguntas frecuentes</a>
+            <a href="#">Medios</a>
+          </div>
+          <div class="enlaces-inferiores">
+            <a href="tyc.html">Términos del servicio</a>
+            <a href="#">Política de reembolso</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/productos.js"></script>
+  </body>
 </html>

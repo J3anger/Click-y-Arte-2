@@ -18,49 +18,67 @@ function cerrarSesion() {
     location.reload(); // Recarga para reflejar cambios
 }
 
-// ================= ABRIR LOGIN EN VENTANA CENTRADA =================
-function abrirVentanaLogin() {
-    const width = 600;
-    const height = 700;
-    const left = (screen.width - width) / 2;
-    const top = (screen.height - height) / 2;
-
-    window.open(
-        "InicioDeSesion.html",
-        "_blank",
-        `width=${width},height=${height},top=${top},left=${left},resizable=yes,scrollbars=yes`
-    );
+// ================= ABRIR MODAL LOGIN =================
+function abrirModalLogin() {
+    const modalLogin = document.getElementById('modalLogin');
+    modalLogin.style.display = 'flex';  // Mostrar el modal
 }
 
-// ================= ABRIR REGISTRO EN VENTANA CENTRADA =================
-function abrirVentanaRegistro() {
-    const width = 700;
-    const height = 800;
-    const left = (screen.width - width) / 2;
-    const top = (screen.height - height) / 2;
+// ================= ABRIR MODAL REGISTRO =================
+function abrirModalRegistro() {
+    const modalRegistro = document.getElementById('modalRegistro');
+    modalRegistro.style.display = 'flex'; // Mostrar el modal
+}
 
-    window.open(
-        "Registrarse.html",
-        "_blank",
-        `width=${width},height=${height},top=${top},left=${left},resizable=yes,scrollbars=yes`
-    );
+// ================= CERRAR LOS MODALES =================
+function cerrarModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.style.display = 'none'; // Ocultar el modal
 }
 
 // ================= EVENTOS DE BOTONES =================
 document.addEventListener("DOMContentLoaded", () => {
     actualizarHeader();
 
+    // Cuando el usuario haga clic en el botón "Registrarse", abrir el modal de registro
     document.querySelectorAll('.btn-registrarse').forEach(btn => {
         btn.addEventListener('click', function (e) {
-            e.preventDefault();
-            abrirVentanaRegistro();
+            e.preventDefault();  // Prevenir el comportamiento por defecto
+            abrirModalRegistro();  // Abrir el modal de registro
         });
     });
 
+    // Cuando el usuario haga clic en el botón "Iniciar sesión", abrir el modal de login
     document.querySelectorAll('.btn-iniciar').forEach(btn => {
         btn.addEventListener('click', function (e) {
-            e.preventDefault();
-            abrirVentanaLogin();
+            e.preventDefault();  // Prevenir el comportamiento por defecto
+            abrirModalLogin();  // Abrir el modal de login
         });
+    });
+
+    // Cerrar el modal de registro o login al hacer clic en la X
+    const cerrarRegistro = document.getElementById('cerrarRegistro');
+    const cerrarLogin = document.getElementById('cerrarLogin');
+
+    if (cerrarRegistro) {
+        cerrarRegistro.addEventListener('click', function () {
+            cerrarModal('modalRegistro');
+        });
+    }
+
+    if (cerrarLogin) {
+        cerrarLogin.addEventListener('click', function () {
+            cerrarModal('modalLogin');
+        });
+    }
+
+    // Cerrar el modal si se hace clic fuera del modal
+    window.addEventListener('click', function (event) {
+        if (event.target === document.getElementById('modalRegistro')) {
+            cerrarModal('modalRegistro');
+        }
+        if (event.target === document.getElementById('modalLogin')) {
+            cerrarModal('modalLogin');
+        }
     });
 });

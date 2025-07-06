@@ -19,7 +19,7 @@
   background-color: #fff;
   margin: 5% auto;
   padding: 2rem;
-  border-radius: 15px; /* Bordes redondeados más suaves */
+  border-radius: 10px;
   max-width: 600px;
   width: 90%;
   max-height: 80%;
@@ -32,14 +32,14 @@
 /* Modal header */
 .modal-header {
   text-align: center;
-  margin-bottom: 20px; /* Aumento el margen inferior */
-  margin-top: 20px;  /* Aumento el margen superior */
+  margin-bottom: 1.5rem; /* Espacio entre el logo y el texto */
+  margin-top: 20px; /* Espacio desde la parte superior del modal */
 }
 
 .modal-logo {
   display: block;
   max-width: 130px;
-  margin: 0 auto 20px;  /* Centrado y con margen abajo */
+  margin: 0 auto 20px;  /* Centrado y con mayor margen abajo */
   object-fit: contain;
   animation: bounceIn 1s ease-in-out;
 }
@@ -51,28 +51,12 @@
   margin-bottom: 15px;
 }
 
-/* Animación de la descripción de la inscripción */
 .modal-header p {
   font-size: 18px;
   color: #333;
-  margin-top: 20px; /* Espacio entre el logo y el texto */
+  margin-top: 20px;
   font-weight: bold;
   animation: slideIn 2s ease-out infinite;
-}
-
-/* Deslizar el texto de inscripción */
-@keyframes slideIn {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
 }
 
 /* Botón de Cerrar (X) */
@@ -92,7 +76,7 @@
   color: #ff6347; /* Color de hover para el botón de cerrar */
 }
 
-/* Formulario de registro */
+/* Estilos para el formulario */
 .form-box {
   display: flex;
   flex-direction: column;
@@ -128,7 +112,7 @@ button:hover {
   background-color: #0056b3;
 }
 
-/* Toggle password visibility */
+/* Contraseña - mostrar/ocultar */
 .password-wrapper {
   display: flex;
   align-items: center;
@@ -149,7 +133,7 @@ button:hover {
   color: #007bff;
 }
 
-/* Forgot password link */
+/* Enlace de contraseña olvidada */
 .olvido-pass {
   text-align: right;
   color: #007bff;
@@ -161,7 +145,7 @@ button:hover {
   text-decoration: underline;
 }
 
-/* Social buttons */
+/* Botones sociales */
 .social-buttons {
   display: flex;
   flex-direction: column;
@@ -197,7 +181,7 @@ button:hover {
   background-color: #2d4373;
 }
 
-/* Modal Animation */
+/* Animaciones */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -209,7 +193,6 @@ button:hover {
   }
 }
 
-/* ZoomIn Animation */
 @keyframes zoomIn {
   from {
     transform: scale(0.5);
@@ -219,7 +202,21 @@ button:hover {
   }
 }
 
-/* BounceIn Animation */
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Animación BounceIn para el logo */
 @keyframes bounceIn {
   0% {
     transform: scale(0.5);
@@ -232,7 +229,7 @@ button:hover {
   }
 }
 
-/* Responsiveness */
+/* Responsividad */
 @media (max-width: 768px) {
   .modal-content {
     width: 85%;

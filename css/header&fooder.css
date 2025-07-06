@@ -1,11 +1,9 @@
-/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===== BASE ===== */
 body, html {
   height: 100%;
   font-family: Arial, sans-serif;
@@ -15,9 +13,10 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  position: relative;
 }
 
-/* ===== AVISO SUPERIOR ===== */
+
 .aviso-contacto {
   font-size: 0.875rem;
   background-color: #f1f1f1;
@@ -28,7 +27,6 @@ body {
   position: relative;
 }
 
-/* ===== HEADER ===== */
 .header {
   background-color: #fff;
   border-bottom: 1px solid #ccc;
@@ -53,7 +51,6 @@ body {
   color: #333;
 }
 
-/* ===== BOTONES ===== */
 .btn-registrarse,
 .btn-iniciar {
   padding: 10px 18px;
@@ -93,10 +90,9 @@ body {
 }
 
 .acciones {
-  gap: 10px; /* separación entre botones en desktop */
+  gap: 10px;
 }
 
-/* ===== ICONOS Y CARRITO ===== */
 .icono,
 .carrito-img {
   width: 29px;
@@ -126,7 +122,6 @@ body {
   justify-content: center;
 }
 
-/* ===== NAVEGACIÓN DESKTOP ===== */
 .nav-links a {
   text-decoration: none;
   color: #333;
@@ -140,7 +135,6 @@ body {
   text-decoration: underline;
 }
 
-/* ===== NAVEGACIÓN MOBILE ===== */
 .nav-links-mobile {
   max-height: 0;
   overflow: hidden;
@@ -211,7 +205,6 @@ body {
   opacity: 1;
 }
 
-/* ✅ NUEVO: Estilo de botones en menú móvil */
 .mobile-buttons {
   display: flex;
   flex-direction: column;
@@ -226,7 +219,6 @@ body {
   margin: 0 auto;
 }
 
-/* ===== BOTÓN HAMBURGUESA ===== */
 .boton-hamburguesa {
   background: none;
   border: 1px solid #000;
@@ -242,7 +234,6 @@ body {
   transform: scale(1.1);
 }
 
-/* ===== BUSCADOR ===== */
 .input-busqueda {
   display: none;
   width: 0;
@@ -261,7 +252,6 @@ body {
   opacity: 1;
 }
 
-/* ===== FOOTER ===== */
 .footer {
   background-color: #f5f5f5;
   border-top: 1px solid #ccc;
@@ -317,41 +307,4 @@ body {
 .enlaces-inferiores a:hover {
   color: #000;
   text-decoration: underline;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .nav-contenido,
-  .acciones,
-  .header-title {
-    display: none !important;
-  }
-
-  .header-logo {
-    margin: 0 auto;
-  }
-
-  .contenedor-footer {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-    text-align: left;
-  }
-
-  .enlaces-superiores,
-  .enlaces-inferiores {
-    text-align: left;
-    width: 100%;
-  }
-
-  .imagenes-footer {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  .mobile-buttons .btn {
-    width: 100%;
-    max-width: 280px;
-    margin: 0 auto;
-  }
 }
